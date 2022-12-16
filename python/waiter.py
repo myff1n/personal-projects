@@ -12,17 +12,22 @@ global menu
 menu = {
   
     "food": {
-        "Salad": 4,
-        "Chicken Nuggets": 5,
-        "Hamburger": 6,
-        "Fries": 2
+        "Cookie": 1.29,
+        "Pizza": 9.89,
+        "Ice Cream": 2.99,
+        "Salad": 6.99,
+        "Chicken Nuggets": 3.49,
+        "Hamburger": 3.99,
+        "Fries": 2.99
   }, 
 
     "drinks": {
         "Water": 0,
-        "Pepsi": 2,
-        "Dr Pepper": 2,
-        "Coca Cola": 2
+        "Pepsi": 2.49,
+        "Dr Pepper": 2.49,
+        "Coca Cola": 2.49,
+        "Sprite": 2.49,
+        "Root Beer": 2.49
   }
 
 }
