@@ -92,13 +92,14 @@ def game():
       #guess is blank
       if guess == "":
         print("Please input a card")
-      #right number guessed
+      #right card guessed
       elif guess == card:
         correct = True;
         wins += 1;
         print("You Win!")
         #run endgame function
         endGame()
+        #wrong card guessed
       elif guess[:1] == card[:1] and guess[5:] != card[5:]:
         print("Wrong suit, guess again")
       elif guess[:1] != card[:1] and guess[5:] == card[5:]:
