@@ -1,5 +1,6 @@
 import random
 
+#different types of cards
 deck = [
   "Ace Of ",
   "2 Of ",
@@ -15,24 +16,29 @@ deck = [
   "Queen Of ",
   "King Of ",
 ]
+
+#different suits
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 
 #unnecessarily shuffling the deck because it's cards
 random.shuffle(deck)
 
+#reset variables
 global correct
 global wins
 correct = False;
 wins = 0;
 
-
+#end of game function, called when user guesses the correct card
 def endGame():
-  string_wins = str(wins)
-  print("Win counter: " + string_wins)
+  #tell user win count and ask if they want to play again
+  print("Win counter: " + str(wins))
   print("Play again? Y/N")
   coin = input("").upper()
+  #call game function if yes
   if coin == "Y":
     game()
+  #exit program if no
   else:
     print("See you next time")
 
@@ -41,11 +47,12 @@ def game():
   #set number and reset win boolean
   card = random.choice(deck) + random.choice(suits)
 
-  #loop to keep user guessing
+  #loop to keep game going
   while correct == False:
     print("Guess a card: ")
     print(card[5:])
     guess = input("").title()
+    #if the card is a King or Jack
     if card[:4] == "King" or "Jack":
       #guess is blank
       if guess == "":
@@ -63,6 +70,7 @@ def game():
         print("Wrong number, guess again")
       else:
         print("Wrong number and suit, guess again")
+    #if the card is a Queen
     elif card[:5] == "Queen":
       #guess is blank
       if guess == "":
