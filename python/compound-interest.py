@@ -5,26 +5,28 @@ import math
 
 #prompt user
 print("Hello! Welcome to the Compound Interest Program!")
-print("Interest is 6% per year")
 print("")
 print("How much money will you deposit?")
 #save deposit as a variable, and make it a float
-depInput = input("")
+depInput = input("").strip()
 dep = float(depInput)
-#save number of years as a variable, and make it a float it too
+#save interest as a variable, and make it a float too
+interestInput = input("").replace("%", "").strip()
+interest = float(interestInput) / 100
+#save number of years as a variable, and make it another float
 print("How many years do you plan to leave it?")
-yrsInput = input("")
+yrsInput = input("").strip()
 yrs = int(yrsInput)
 
 #calculate 1st year. done for variable convenience
-year1 = (dep * 0.06) + dep
+year1 = (dep * interest) + dep
 
 i = 1
 finalAmount = year1
 
 #loop for each year
 while i < yrs:
-    finalAmount = (finalAmount * 0.06) + finalAmount
+    finalAmount = (finalAmount * interest) + finalAmount
     i += 1
 
 
