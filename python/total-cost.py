@@ -13,7 +13,7 @@ itemsPurchased = input("")
 itemsPurchased = int(itemsPurchased)
 
 #prompt user for tax
-print("How much tax? (in decimal, ex. 0.07)")
+print("How much tax? (in decimal, ex. 0.07 = 7%)")
 tax = float(input(""))
 
 #prompt user for cost (to the 100ths decimal)
