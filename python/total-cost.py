@@ -37,4 +37,4 @@ for x in purchaseList:
 print("Calculating...")
 time.sleep(random.randint(1, 5))
   
-print(f"After tax, the total cost of your {itemsPurchased} items is: $" '{:03.2f}'.format(totalCost))
+print(f"After tax, the total cost of your {itemsPurchased} items is: $" '{:01.2f}'.format(totalCost))
